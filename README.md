@@ -17,7 +17,7 @@
   - [Liberation fonts](https://github.com/liberationfonts/liberation-fonts/);
   - [DejaVu fonts](https://dejavu-fonts.github.io/).
 
-## Preview of html output:
+## Preview of HTML output:
 
 https://ip-borisov-addict-79.github.io/pandoc-book-template-demo.html
 
