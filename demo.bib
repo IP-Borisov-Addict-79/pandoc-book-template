@@ -1,0 +1,79 @@
+# And now I will show you all the Quirks and Features:
+
+- citeprocs doesn't like brackets and other special symbols in citation labels,
+  the only one that works is colon
+
+- no, we don't support arXiv citations :(
+
+- you either have DOI or URL, not both; DOI always beats URL
+
+- DOI can be entered as a proper DOI number or as a full URL (i.e. as
+  `https://doi.org/DOI-NUMBER`)
+
+- unlike a bibtex-ready database, here the {Case Sensitive Values} should be
+  enclosed in SINGLE set of parenthesis (`{...}`), otherwise the inner pair
+  will be reproduced verbatim in the rendered bibliography record
+
+@article{SOKOLSKY201174,
+    author = {P. Sokolsky},
+    title = {Final Results from the High resolution Fly's Eye (HiRes) Experiment},
+    journal = {Nuclear Physics B --- Proceedings Supplements},
+    volume = {212-213},
+    pages = {74-78},
+    year = {2011},
+    note = {Proceedings of the Cosmic Ray International Seminars (CRIS 2010)},
+    issn = {0920-5632},
+    eprint = {1010.2690},
+    primaryClass = {astro-ph.HE},
+    archivePrefix = {arXiv},
+    doi = {10.1016/j.nuclphysbps.2011.03.010}
+}
+
+@techreport{Nelson:SLAC:1985,
+    author = {Nelson, W. and Hirayama, H. and Rogers, W. O.},
+    title = {{The EGS4 Code System}},
+    institution = {SLAC},
+    type = {SLAC-R-265},
+    year = {1985},
+    url = {https://www-public.slac.stanford.edu/scidoc/docMeta.aspx?slacPubNumber=slac-R-265}
+}
+
+@book{Weast:1981,
+    author = {Weast, R. C.},
+    title = {{CRC Handbook of Chemistry and Physics, 61st edition}},
+    publisher = {{CRC Press}},
+    address = {{Boca Raton, FL USA}},
+    isbn = {9780849304613},
+    numpages = {1656},
+    year = {{1981}}
+}
+
+@techreport{WMM:2020,
+    author = {Chulliat, A. and Brown, W. and Alken, P. and Beggan, C. and Nair, M. and Cox, G. and Woods, A. and Macmillan, S. and Meyer, B. and Paniccia, M.},
+    title = {{The US/UK World Magnetic Model for 2020-2025}},
+    type = {Technical Report},
+    institution = {{National Centers for Environmental Information (U.S.); British Geological Survey}},
+    year = {2020},
+    doi = {10.25923/ytk1-yx35}
+}
+
+@inproceedings{Togini:NuINT12,
+    author = {Togini, S. C. and Gomes, R. A.},
+    title = {{Simulation of atmospheric temperature effects on cosmic ray muon flux}},
+    booktitle = {{NuINT12: The 8th International Workshop on Neutrino-Nucleus Interactions in the Few-GeV Region (22-27 October 2012, Rio de Janeiro, Brazil)}},
+    editor = {Da Motta, H. and Morfin, J. G. and Sakuda, M.},
+    publisher = {{AIP Conf. Proc.}},
+    volume = {1663},
+    number = {1},
+    pages = {120015},
+    year = {2015},
+    doi = {10.1063/1.4919521}
+}
+
+@online{Pandoc,
+    author = {MacFarlane, John},
+    title = {Pandoc User's Guide},
+    year = {2022},
+    urldate = {Accessed: 2024-11-11},
+    url = {https://pandoc.org/chunkedhtml-demo/}
+}

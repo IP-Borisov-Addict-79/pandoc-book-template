@@ -1,0 +1,47 @@
+---
+# options for LaTeX (PDF only)
+documentclass: report # other values: article, book (pdf only)
+fontsize: 10pt
+papersize: a4
+#
+lang: en        # default language
+otherlangs: en  # second language (for non-english main)
+colorlinks: true
+linkcolor: Brown
+toccolor: Brown
+urlcolor: MidnightBlue
+link-citations: true
+cite-method: bibtex
+#
+# book metadata
+title: Template for generating books using Pandoc
+date: \today
+author: M. M. Chims
+#
+# options for pandoc-crossref
+figureTitle: Fig. # title for figure in captions
+figPrefix: Fig.   # prefix to in-text reference (i.e. "see Fig. N")
+tableTitle: Table # title for table captions
+tblPrefix: Table  # prefix to in-text reference (i.e. "...in Table N")
+#
+reference-section-title: References
+#
+abstract: |
+  A short commentary on the Markdown template for reports and books that can be compiled to html, epub and pdf using the [Pandoc](https://pandoc.org) universal text converter.
+#
+# preamble for XeLaTeX (PDF only)
+header-includes:
+    - \setmainfont{Liberation Serif}
+    - \setsansfont{DejaVu Sans}
+    - \setmonofont{DejaVu Sans Mono}
+    - \defaultfontfeatures{Scale=MatchLowercase, Mapping=tex-text}
+    - \usepackage[top=2.5cm,bottom=2.5cm,left=3cm,right=1.5cm]{geometry}
+    - \setlength{\parindent}{1.9em}
+    - \setlength{\parskip}{0em}
+    - \usepackage{setspace}
+    - \onehalfspacing
+    - \usepackage{etoolbox}
+    - \AtBeginEnvironment{quote}{\par\singlespacing\small}
+    - \usepackage{fancyvrb}
+    - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{frame=lines,framerule=0.4mm,framesep=1.6mm,commandchars=\\\{\}}
+---
