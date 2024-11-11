@@ -17,4 +17,8 @@
   - [Liberation fonts](https://github.com/liberationfonts/liberation-fonts/);
   - [DejaVu fonts](https://dejavu-fonts.github.io/).
 
-CSS for HTML is based on a style by Pascal Hertleif (https://gist.github.com/killercup/5917178).
+## Preview of html output:
+
+https://ip-borisov-addict-79.github.io/pandoc-book-template-demo.html
+
+CSS for HTML version is based on a style by Pascal Hertleif (https://gist.github.com/killercup/5917178).
