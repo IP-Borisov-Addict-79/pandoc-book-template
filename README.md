@@ -2,10 +2,12 @@
 
 ## Quickstart:
 
-- `make` - to produce html;
-- `make demo.epub` - to produce epub;
-- `make demo.pdf` - to produce pdf;
-- `make all` - to produce all three formats.
+- `$ make` - to produce html;
+- `$ make demo.epub` - to produce epub;
+- `$ make demo.pdf` - to produce pdf;
+- `$ make all` - to produce all three formats.
+
+The main source file is `demo.md`, `demo.yaml` contains document metadata, `demo.bib` is bibliography database. For details see [compiled HTML version](https://ip-borisov-addict-79.github.io/pandoc-book-template-demo.html).
 
 ## Requirements:
 
@@ -17,8 +19,10 @@
   - [Liberation fonts](https://github.com/liberationfonts/liberation-fonts/);
   - [DejaVu fonts](https://dejavu-fonts.github.io/).
 
-## Preview of HTML output:
+## Preview of compiled documents:
 
-https://ip-borisov-addict-79.github.io/pandoc-book-template-demo.html
+- HTML: https://ip-borisov-addict-79.github.io/pandoc-book-template-demo.html
+- EPUB: https://drive.google.com/file/d/1A06WWMxGW86kzrSLesJWhvZiabnTkR1C/
+- PDF: https://drive.google.com/file/d/1W1u9LjO5ZLfivO7hBe-SfokRjqe5U_E7/
 
 CSS for HTML version is based on a style by Pascal Hertleif (https://gist.github.com/killercup/5917178).
