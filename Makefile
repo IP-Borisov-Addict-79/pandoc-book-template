@@ -15,7 +15,7 @@ HTML        =    $(DOC).html
 EPUB        =    $(DOC).epub
 
 include epub-fonts.mk
-include pandoc-options.mk
+include settings.mk
 
 $(HTML): $(SRC) $(BIB) $(YAML) $(CSL) html.css $(IMAGES)
 	pandoc $(HTML_OPTS) $(SRC)
