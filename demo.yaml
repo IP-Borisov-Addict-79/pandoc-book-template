@@ -27,7 +27,7 @@ tblPrefix: Table  # prefix to in-text reference (i.e. "...in Table N")
 reference-section-title: References
 #
 abstract: |
-  A short commentary on the Markdown template for reports and books that can be compiled to html, epub and pdf using the [Pandoc](https://pandoc.org) universal text converter.
+  A short commentary on the Markdown template for reports and books that can be compiled to HTML, EPUB and PDF using the [Pandoc](https://pandoc.org) universal text converter.
 #
 # preamble for XeLaTeX (PDF only)
 header-includes:

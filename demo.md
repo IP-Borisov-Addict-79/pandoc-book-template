@@ -2,15 +2,15 @@
 
 #### Quickstart:
 
-- `make`\ --- to produce HTML;
-- `make demo.epub`\ --- to produce EPUB;
-- `make demo.pdf`\ --- to produce PDF;
-- `make all`\ --- to produce all three outputs.
+- `$ make`\ --- to produce HTML;
+- `$ make demo.epub`\ --- to produce EPUB;
+- `$ make demo.pdf`\ --- to produce PDF;
+- `$ make all`\ --- to produce all three outputs.
 
 #### Additional requirements besides Pandoc:
 
-- [pandoc-crossref](https://github.com/lierdakil/pandoc-crossref) filter for numbering and cross-referencing figures, tables and equations;
-- [citeproc](https://github.com/jgm/citeproc) extension for bibliography generation;
+- [pandoc-crossref](https://github.com/lierdakil/pandoc-crossref), filter for numbering and cross-referencing figures, tables and equations;
+- [citeproc](https://github.com/jgm/citeproc), extension for bibliography generation;
 - For PDF generation:
   - a LaTeX system with XeTeX engine;
   - [Liberation fonts](https://github.com/liberationfonts/liberation-fonts/);
@@ -66,15 +66,15 @@ Equation labels are specified inside curly brackets after a space from the closi
 
 > **Note** the "minus" character before "at" sign in the reference code: it suppresses insertion of _equation prefix_ ("`eqnPrefix`" which is set to "`eq.`\ " by default); i.e. without this minus the resulting reference would look like "([@eq:energy])" rather than just\ "([-@eq:energy])".
 
-Pandoc can covert TeX-math to codes intended for several math rendering engines, most prominent of them are [MathJax](https://www.mathjax.org/) and [MathML](https://www.w3.org/TR/MathML/). Most web-browsers support both, but your average epub-reader supports only MathML. Thus, when converting to EPUB, the "`--mathml`" option is _always_ recommended. It is also the default option for HTML conversion, it can be changed to other value (see "`HTML_MATH`" line in `settings.mk`):
+Pandoc can covert TeX-math to codes intended for several math rendering engines, most prominent of them are [MathJax](https://www.mathjax.org/) and [MathML](https://www.w3.org/TR/MathML/). Most web-browsers support both, but your average epub-reader supports only MathML. Thus, when converting to EPUB, the "`--mathml`" option is _always_ recommended. This is also the default option for HTML conversion and it can be changed to other value (see "`HTML_MATH`" line in `settings.mk`):
 
 ```console
 $ make HTML_MATH=--mathjax
 ```
 
-That will produce a HTML document that renders equations via MathJax.
+This will produce a HTML document that renders equations via MathJax.
 
-> **Another consideration** when choosing the math rendering option: a web-page that displays MathML is completely self-contained, while MathJax by default relies heavily on external web.
+> **Another consideration** when choosing a math rendering option: a web-page that displays MathML is completely self-contained, while MathJax by default relies heavily on external web.
 
 ### 1.3.3 Tables
 
