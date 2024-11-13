@@ -1,14 +1,19 @@
 # And now I will show you all the Quirks and Features:
 
-- citeprocs doesn't like brackets and other special symbols in citation labels,
+- citeprocs doesn't like brackets and other special symbols in citation keys,
   the only one that works is colon
 
 - no, we don't support arXiv citations :(
 
-- you either have DOI or URL, not both; DOI always beats URL
+- `note` field type is not supported in any way :(
 
-- DOI can be entered as a proper DOI number or as a full URL (i.e. as
-  `https://doi.org/DOI-NUMBER`)
+- Following quirks seem to be a normal bibtex behaviour, but I don't
+  remember to be honest:
+  - you either have DOI or URL, not both; DOI always beats URL
+  - DOI can be entered as a proper DOI number or as a full URL (i.e. as
+    `https://doi.org/DOI-NUMBER`)
+
+More about bibtex format: https://www.bibtex.com/g/bibtex-format/
 
 @article{SOKOLSKY201174,
     author = {P. Sokolsky},
