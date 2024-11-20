@@ -1,7 +1,7 @@
 ---
 # options for LaTeX (PDF only)
 documentclass: report # other values: article, book (pdf only)
-fontsize: 12pt
+fontsize: 11pt
 papersize: a4
 #
 lang: en        # default language
