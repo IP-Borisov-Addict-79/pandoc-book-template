@@ -3,7 +3,7 @@ VIEW        =    firefox
 DOC         =    demo
 SRC         =    $(DOC).md
 
-FIGURES     =    Keilhauer-Linsley.png
+FIGURES     =    Keilhauer-Linsley.png rusek.png
 IMAGES      =    $(addprefix images/, $(FIGURES))
             
 CSL_BASE    =    american-physics-society
