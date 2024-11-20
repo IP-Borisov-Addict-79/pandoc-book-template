@@ -1,0 +1,52 @@
+---
+# options for LaTeX (PDF only)
+documentclass: report # other values: article, book (pdf only)
+fontsize: 11pt
+papersize: a4
+#
+lang: ru        # default language
+otherlangs: en  # second language (for non-english main)
+colorlinks: true
+linkcolor: Brown
+toccolor: Brown
+urlcolor: MidnightBlue
+link-citations: true
+cite-method: bibtex
+#
+# book metadata
+title: Шаблон для генерации книг с помощью Pandoc
+date: \today
+author: М. М. Чимз
+figureTitle: Рис. 
+#
+# options forpandoc-crossref
+figureTitle: Рис.    # title for figure in captions
+figPrefix: Рис.      # prefix to in-text reference (i.e. "см. Рис. N")
+tableTitle: Таблица  # title for table captions
+tblPrefix: Табл.     # prefix to in-text reference (i.e. "...в Табл. N")
+#
+reference-section-title: Список литературы
+#
+abstract: |
+    Краткое описание Markdown-темплейта для книг и отчетов, предназначенного для преобразования в HTML, EPUB и PDF с помощью универсального конвертера [Pandoc](https://pandoc.org).
+#
+# preamble for XeLaTeX (PDF only)
+header-includes:
+    - \usepackage{polyglossia} # note differences from english version (!)
+    - \setmainfont{Liberation Serif}
+    - \setsansfont{DejaVu Sans}
+    - \setmonofont{DejaVu Sans Mono}
+    - \defaultfontfeatures{Scale=MatchLowercase, Mapping=tex-text}
+    - \setdefaultlanguage[spelling=modern]{russian} # (!)
+    - \setkeys{russian}{babelshorthands=true} # (!)
+    - \setotherlanguage{english} # (!)
+    - \usepackage[top=2.5cm,bottom=2.5cm,left=3cm,right=1.5cm]{geometry}
+    - \setlength{\parindent}{1.9em}
+    - \setlength{\parskip}{0em}
+    - \usepackage{setspace}
+    - \onehalfspacing
+    - \usepackage{etoolbox}
+    - \AtBeginEnvironment{quote}{\par\singlespacing\small}
+    - \usepackage{fancyvrb}
+    - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{frame=lines,framerule=0.4mm,framesep=1.6mm,commandchars=\\\{\}}
+---

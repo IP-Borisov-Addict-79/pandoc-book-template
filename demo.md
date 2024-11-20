@@ -62,7 +62,7 @@ $$
     E^2 = p^2 c^2 + m_0^2 c^4\text{.}
 $$ {#eq:energy}
 
-Equation labels are specified inside curly brackets after a space from the closing "`$$`". The "`#eq:`" is a part of the equation label syntax. In-text reference to equation is produced by inserting its label as "`([-@eq:energy])`": behold the reference to equation\ ([-@eq:energy]).
+\noindent Equation labels are specified inside curly brackets after a space from the closing "`$$`". The "`#eq:`" is a part of the equation label syntax. In-text reference to equation is produced by inserting its label as "`([-@eq:energy])`": behold the reference to equation\ ([-@eq:energy]).
 
 > **Note** the "minus" character before "at" sign in the reference code: it suppresses insertion of _equation prefix_ ("`eqnPrefix`" which is set to "`eq.`\ " by default); i.e. without this minus the resulting reference would look like "([@eq:energy])" rather than just\ "([-@eq:energy])".
 
@@ -72,7 +72,7 @@ Pandoc can covert TeX-math to codes intended for several math rendering engines,
 $ make HTML_MATH=--mathjax
 ```
 
-This will produce a HTML document that renders equations via MathJax.
+\noindent This will produce a HTML document that renders equations via MathJax.
 
 > **Another consideration** when choosing a math rendering option: a web-page that displays MathML is completely self-contained, while MathJax by default relies heavily on external web.
 
@@ -104,3 +104,21 @@ A detailed description of syntaxes for tables of various types is given in\ [@Pa
    {#tbl:table_example}
 
 A table can be referenced by inserting its tag: "`[@tbl:table_example]`". The "`#tbl:`" is a part of the table label syntax. The result: the beauty of a pipe table is demonstrated in [@tbl:table_example]. The "Table\ " part of the reference (_table prefix_) is produced automatically and is controlled via "`tblPrefix`" parameter in `demo.yaml`.
+
+## 1.4 I18n
+
+Language settings are specified in the document metadata file (see `demo.yaml` and `demo-ru.yaml`). The `demo-ru.yaml` provides the example for Russian language. To switch to a different YAML file, edit the "`YAML`" line in the `settings.mk`:
+
+```Makefile
+YAML           =    $(DOC)-ru.yaml
+```
+
+\noindent or specify it in the command line:
+
+```console
+make all YAML=demo-ru.yaml
+```
+
+> **Note** that unlike some BibTeX-based citation styles, the "citeproc + CSL" filter does not support the "`language`" field type for individual bibliographical records; this leads to funny glithes in the rendered citations of English sources as shown in [@fig:2].
+
+![The bibliography list rendered by citeproc filter in cyrillic language environment. Note cyrillic insertions in resulting English citations.](images/rusek.png){ width=70% #fig:2 }

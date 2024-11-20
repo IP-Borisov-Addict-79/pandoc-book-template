@@ -1,7 +1,7 @@
 ---
 # options for LaTeX (PDF only)
 documentclass: report # other values: article, book (pdf only)
-fontsize: 10pt
+fontsize: 12pt
 papersize: a4
 #
 lang: en        # default language
@@ -16,7 +16,7 @@ cite-method: bibtex
 # book metadata
 title: Template for generating books using Pandoc
 date: \today
-author: M. M. Chims
+author: M. M. Cheems
 #
 # options for pandoc-crossref
 figureTitle: Fig. # title for figure in captions
