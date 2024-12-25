@@ -7,6 +7,9 @@
 
 - `note` field type is not supported in any way :(
 
+- `@misc` entry type ignores `note` & `howpublished` fields, results look kinda
+  ugly :(
+
 - Following quirks seem to be a normal bibtex behaviour, but I don't
   remember to be honest:
   - you either have DOI or URL, not both; DOI always beats URL
@@ -76,5 +79,6 @@ More about bibtex format: https://www.bibtex.com/g/bibtex-format/
     title = {Pandoc User's Guide},
     year = {2022},
     note = {Retrieved 2024-11-11},
+    howpublished = {https://pandoc.org/chunkedhtml-demo/},
     url = {https://pandoc.org/chunkedhtml-demo/}
 }

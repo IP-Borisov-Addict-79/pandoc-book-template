@@ -135,7 +135,10 @@ def extract_tarball(arc):
     # extract
     with open(arc, 'rb') as f:
         with tarfile.open(fileobj = f, mode = 'r|gz') as tgz:
-            tgz.extractall()
+            # argument for extractall() filter - ignore or block most features
+            # specific to UNIX-like filesystems
+            # see: https://docs.python.org/3/library/tarfile.html#tarfile-extraction-filter
+            tgz.extractall(filter = 'data')
             pass
         pass
     return topdir
